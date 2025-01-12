@@ -1,6 +1,6 @@
 # AgentStatuette
 
-This Project uses AgentKit – CDP’s best-in-class toolkit for building AI Agents.
+This Project uses AgentKit – CDP's best-in-class toolkit for building AI Agents.
 
 AgentStatuette want to make people's life easier with AI Agents.
 
@@ -48,10 +48,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Environment Variables
 
-Copy `.env.example` to `.env.local` and fill in the required values:
+The project requires several environment variables to be set up before it can run. Follow these steps:
 
-Required environment variables:
-[List your required env variables here]
+1. Copy the example environment file:
+```bash
+cp .env.example .env.local
+```
+
+2. Edit `.env.local` and set the following required variables:
+
+### OpenAI Configuration
+- `OPENAI_API_KEY`: Your OpenAI API key for AI functionality
+  - Get it from: https://platform.openai.com/api-keys
+
+### CDP (Coinbase Developer Platform) Configuration
+- `CDP_API_KEY_NAME`: Your CDP API key name
+- `CDP_API_KEY_PRIVATE_KEY`: Your CDP private key
+  - Get these from: https://docs.base.org/tools/agentkit
+
+### Optional Configuration
+- `NETWORK_ID`: The network to connect to (defaults to base-sepolia if not set)
+
+Make sure to keep your `.env.local` file secure and never commit it to the repository.
 
 ## Contributing
 

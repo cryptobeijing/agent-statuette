@@ -1,6 +1,10 @@
 # Agent Statuette
 
-A Next.js project for [brief project description].
+This Project uses AgentKit – CDP’s best-in-class toolkit for building AI Agents.
+
+AgentStatuette want to make people's life easier with AI Agents.
+
+The idea is from CryptoStatuette, Base Global Community Builder #001, who is very active on Twitter, Farcaster, Telegram, Discord, etc. and has a lot of Onchain activities.
 
 ## Prerequisites
 

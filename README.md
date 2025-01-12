@@ -1,4 +1,4 @@
-# Agent Statuette
+# AgentStatuette
 
 This Project uses AgentKit – CDP’s best-in-class toolkit for building AI Agents.
 

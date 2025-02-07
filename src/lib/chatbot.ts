@@ -179,8 +179,16 @@ async function runChatMode(agent: any, config: any, message: string): Promise<Ch
   let enhancedMessage = message;
 
   // Enhance common commands with more context
-  if (message.includes('wallet') || message.includes('address')) {
-    enhancedMessage = "Please show me my wallet address and details from the CDP wallet.";
+  if (message.includes('balance')) {
+    enhancedMessage = `Please show me my wallet balance and token holdings. Format ALL numbers with exactly 3 decimal places:
+    - If the balance is 0, show it as "0.000"
+    - If the balance is very small like 0.00123, show it as "0.001"
+    - If the balance is 0.00234, show it as "0.002"
+    - Always include all three decimal places, even for zero
+    For example, format the response like this: "0xAddress: 0.000 ETH" or "0xAddress: 0.001 ETH"
+    Never show just a plain "0" without decimals.`;
+  } else if (message.includes('address')) {
+    enhancedMessage = "Please show me only my wallet address. Focus on displaying the wallet address and network details.";
   } else if (message.includes('faucet')) {
     enhancedMessage = "Please request test tokens from the faucet for my wallet on the base-sepolia network.";
   } else if (message.includes('send token')) {

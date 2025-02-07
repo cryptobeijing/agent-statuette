@@ -1,84 +1,64 @@
-# AgentStatuette
+AgentStatuette 🤖
 
-This Project uses AgentKit – CDP's best-in-class toolkit for building AI Agents.
+AgentStatuette is an AI-powered web application that makes your onchain life easier with AgentKit. It provides a user-friendly interface for managing your blockchain wallet and performing various token operations.
 
-AgentStatuette want to make people's life easier with AI Agents.
+The idea is from CryptoStatuette who is everywhere (Twitter, Telegram, Discord, Farcaster, etc.) in the Base community and sometimes has to perform repetitive manual tasks, such as sending faucet to global builders.
+Features
 
-The idea is from CryptoStatuette, Base Global Community Builder #001, who is very active on Twitter, Farcaster, Telegram, Discord, etc. and has a lot of Onchain activities.
+    🏦 Wallet Management: Check your wallet address and details
+    💧 Faucet Access: Request test tokens for your wallet
+    💰 Balance Checking: View your current token balance
+    💸 Token Transfer: Send tokens to other addresses
+    🤖 Autonomous Mode: Let the agent perform actions automatically
 
-## Prerequisites
+Getting Started
+Prerequisites
 
-- Node.js 18+ 
-- pnpm (recommended) or npm
+    Node.js (v18 or higher)
+    pnpm (v8 or higher)
 
-## Setup
+Installation
 
-1. Clone the repository:
-```bash
-git clone [your-repo-url]
-cd agent-statuette
-```
+    Clone the repository:
 
-2. Install dependencies:
-```bash
+git clone https://github.com/cryptobeijing/agentstatuette.git
+cd agentstatuette
+
+    Install dependencies:
+
 pnpm install
-```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env.local
-```
-Then edit `.env.local` with your configuration values.
+    Create a .env.local file based on .env.example and fill in your configuration.
 
-## Development
+    Start the development server:
 
-Run the development server:
-
-```bash
 pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Open http://localhost:3000 in your browser.
 
-## Project Structure
+Environment Variables
 
-- `src/` - Application source code
-- `public/` - Static assets
-- `src/app/` - Next.js 13+ App Router pages and components
+Create a .env.local file in the root directory with the following variables:
 
-## Environment Variables
+# OPENAI
+OPENAI_API_KEY=your_openai_api_key_here
 
-The project requires several environment variables to be set up before it can run. Follow these steps:
+# CDP
+CDP_API_KEY_NAME=your_cdp_api_key_name_here
+CDP_API_KEY_PRIVATE_KEY=your_cdp_private_key_here
 
-1. Copy the example environment file:
-```bash
-cp .env.example .env.local
-```
+# Network (Optional)
+NETWORK_ID=base-sepolia  # Defaults to base-sepolia if not set
 
-2. Edit `.env.local` and set the following required variables:
+Technology Stack
 
-### OpenAI Configuration
-- `OPENAI_API_KEY`: Your OpenAI API key for AI functionality
-  - Get it from: https://platform.openai.com/api-keys
+    Next.js 14
+    TypeScript
+    Tailwind CSS
+    AgentKit Integration
 
-### CDP (Coinbase Developer Platform) Configuration
-- `CDP_API_KEY_NAME`: Your CDP API key name
-- `CDP_API_KEY_PRIVATE_KEY`: Your CDP private key
-  - Get these from: https://docs.base.org/tools/agentkit
+License
 
-### Optional Configuration
-- `NETWORK_ID`: The network to connect to (defaults to base-sepolia if not set)
-
-Make sure to keep your `.env.local` file secure and never commit it to the repository.
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-[Your chosen license]
+This project is licensed under the MIT License - see the LICENSE file for details.
+Contact
+For any questions or feedback, please reach out to us through GitHub issues.

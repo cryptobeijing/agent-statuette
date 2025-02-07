@@ -186,7 +186,7 @@ export default function Home() {
               className="p-6 rounded-xl border-2 border-blue-200 hover:border-blue-500 bg-white shadow-lg hover:shadow-xl transition-all duration-300 text-left transform hover:-translate-y-1"
             >
               <h3 className="text-lg font-semibold mb-2 text-blue-800">🏦 My wallet address is</h3>
-              <p className="text-sm text-gray-600">Check your wallet details and balance</p>
+              <p className="text-sm text-gray-600">Check your wallet address</p>
             </button>
             <button
               onClick={() => {
@@ -200,6 +200,16 @@ export default function Home() {
             </button>
             <button
               onClick={() => {
+                setInput("my wallet balance");
+                handleSubmit(new Event('submit') as any);
+              }}
+              className="p-6 rounded-xl border-2 border-blue-200 hover:border-blue-500 bg-white shadow-lg hover:shadow-xl transition-all duration-300 text-left transform hover:-translate-y-1"
+            >
+              <h3 className="text-lg font-semibold mb-2 text-blue-800">💰 My wallet balance is</h3>
+              <p className="text-sm text-gray-600">Check your current token balance</p>
+            </button>
+            <button
+              onClick={() => {
                 setInput("send token");
                 handleSubmit(new Event('submit') as any);
               }}
@@ -207,16 +217,6 @@ export default function Home() {
             >
               <h3 className="text-lg font-semibold mb-2 text-blue-800">💸 Send Token to</h3>
               <p className="text-sm text-gray-600">Send tokens to another address</p>
-            </button>
-            <button
-              onClick={() => {
-                setInput("create a NFT Collections");
-                handleSubmit(new Event('submit') as any);
-              }}
-              className="p-6 rounded-xl border-2 border-blue-200 hover:border-blue-500 bg-white shadow-lg hover:shadow-xl transition-all duration-300 text-left transform hover:-translate-y-1"
-            >
-              <h3 className="text-lg font-semibold mb-2 text-blue-800">🎨 Create NFT Collections</h3>
-              <p className="text-sm text-gray-600">Mint your own unique NFT Collections</p>
             </button>
           </div>
         )}
